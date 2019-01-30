@@ -9,10 +9,9 @@
 
 <h2>Simple Password Analyzer</h2>
 
-After cloning, perform this tasks on the console in the root directory
+After cloning, create a database named 'password_analyzer' in your local machine and perform this tasks on the console in the root directory
 
 - composer install
-- create a database named 'password_analyzer' in your local machine
 - php artisan migrate
 - php artisan serve
 - Then in browser, visit <http://127.0.0.1:8000>
