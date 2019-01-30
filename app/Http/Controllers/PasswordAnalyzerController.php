@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Rules\MustHaveUppercase;
-use App\Rules\MustHaveLowercase;
-use App\Rules\MustHaveNumberOrSymbol;
+
 use App\PasswordAnalyzer;
 
-class UserController extends Controller
+class PasswordAnalyzerController extends Controller
 {
     public function __construct()
     {
@@ -44,11 +42,11 @@ class UserController extends Controller
             } else {
                 $passwordStrength = 'weak';
             }
-    
+
             $request->session()->flash('passwordStrength', $passwordStrength);
         }
-    
-        return redirect('/')->withInput();
+
+        return redirect('/');
     }
 
     public function checkPassword($password)

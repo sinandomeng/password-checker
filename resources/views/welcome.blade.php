@@ -91,7 +91,7 @@
                     <div class="field">
                         <label class="label">Password</label>
                         <div class="control">
-                            <input value="{{ old('password') }}" name="password" class="input {{ Session::get('passwordStrength') }}" type="text" />
+                            <input type="password" name="password" class="input {{ Session::get('passwordStrength') }}" />
 
                             @if (Session::has('passwordStrength'))
                                 <small>Your password strength is <strong>{{ ucwords(str_replace('-', ' ', Session::get('passwordStrength'))) }}</strong></small>
@@ -122,8 +122,8 @@
             <div class="box notice-box">
                 <h6 class="title notice">Credentials</h6>
                 <ul class="">
-                    <li>DATABASE NAME: password-checker</li>
-                    <li>DATABASE TABLE: password</li>
+                    <li>DATABASE NAME: password_analyzer</li>
+                    <li>DATABASE TABLE: password_analyzers</li>
                 </ul>
             </div>
         </div>

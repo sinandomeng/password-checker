@@ -15,8 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('welcome');
-});
-
-Route::post('/register', 'UserController@clientRegistration');
+Route::post('/register', 'PasswordAnalyzerController@clientRegistration');
